@@ -1,24 +1,31 @@
-
-.jugador{
-    color: cyan;
+.jugador {
+    
 }
 
-#jugador1{
+#jugador1 {
     background-color: white;
+    color: black;
 }
 
-#jugador2{
+#jugador2 {
     background-color: black;
+    color: white;
 }
 
-.posicion1{
-    width: 10%;
-    height: 50px;
+.posicion1 {
+    width: 60px;
+    height: 60px;
     background-color: white;
+    box-shadow: 5px 5px 8px #999;
 }
 
-.posicion2{
-    width: 10%;
-    height: 50px;
+.posicion2 {
+    width: 60px;
+    height: 60px;
     background-color: black;
+    box-shadow: 5px 5px 8px #999;
 }
+
+.table.table-center {
+    margin: 0 auto;
+  }

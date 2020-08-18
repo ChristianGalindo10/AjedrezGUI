@@ -6,17 +6,22 @@ import { AppComponent } from './app.component';
 import { TableroComponent } from './tablero/tablero.component';
 import { ComunicacionComponent } from './comunicacion/comunicacion.component';
 import {FormsModule} from '@angular/forms';
+import {HttpClientModule} from '@angular/common/http';
+import { BienvenidaComponent } from './bienvenida/bienvenida.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     TableroComponent,
-    ComunicacionComponent
+    ComunicacionComponent,
+    BienvenidaComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

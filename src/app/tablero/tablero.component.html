@@ -1,11 +1,18 @@
-<section style="text-align: center;">
-    <table id="tabAje" width="50%">
+<div style="text-align:center">
+    <table id="tabAje" width="auto" class="table table-center">
         <tr>
-            <th class="jugador" id="jugador1" colspan="4">{{jugador1.name | uppercase}}</th>
-            <th class="jugador" id="jugador2" colspan="4">{{jugador2.name | uppercase}}</th>
+            <th class="jugador" id="jugador2" colspan="8">{{jugador2.name | uppercase}}</th>
         </tr>
-        <script>
-            {tablero}
-        </script>
+    
+        <tr *ngFor="let fila of filas">
+            <td *ngFor="let celda of fila" class={{celda}}></td>
+        </tr>
+    
+        <tr>
+            <th class="jugador" id="jugador1" colspan="8">{{jugador1.name | uppercase}}</th>
+        </tr>
+        
     </table>
-</section>
+</div>
+    
+    

@@ -20,31 +20,24 @@ export class TableroComponent implements OnInit {
     name: "Cris2"
   };
 
-  constructor() { }
+  filas=[];
+
+  constructor() { 
+    for(var i=0;i<8;i++){
+      this.filas[i] = [];
+      for(var j=0;j<8;j++){
+        if ((i + j) % 2 == 0) {
+          this.filas[i][j]='posicion1';
+        } else {
+          this.filas[i][j]='posicion2';
+        }
+      }
+    }
+  }
 
 
   ngOnInit(): void {
   }
 }
-
-window.onload = () => {
-    for (var i = 0; i < 8; i++) {
-      var fila = document.createElement("tr");
-      //fila.setAttribute("")
-      for (var j = 0; j < 8; j++) {
-        var celda = document.createElement("td");
-        celda.setAttribute("id", "celda" + i + "" + j + "");
-        if ((i + j) % 2 == 0) {
-          celda.setAttribute("class", "posicion2");
-          celda.setAttribute("style", "height:50px;width:50px; background-color:black;");
-        } else {
-          celda.setAttribute("class", "posicion1");
-          celda.setAttribute("style", "height:50px;width:50px; background-color:white;");
-        }
-        fila.appendChild(celda);
-      }
-      document.getElementById("tabAje").appendChild(fila);
-    }
-};
 
 
