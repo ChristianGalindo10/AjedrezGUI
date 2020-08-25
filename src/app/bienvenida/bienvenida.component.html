@@ -2,14 +2,17 @@
     <div class="login-box">
         <img class="logo" src="../../assets/logo.png" alt="Logo de ajedrez">
         <h1>Inicio</h1>
-        <form>
-            <label for="nickname">Nickname</label>
-            <input type="text" placeholder="Ingrese su nickname">
+        <form (submit)="submit()">
+            <label for="nickname1">Nickname Jugador 1</label>
+            <input type="text" placeholder="Ingrese su nickname" [(ngModel)] = "jugador1.name" name="jugador1">
+
+            <label for="nickname2">Nickname Jugador 2</label>
+            <input type="text" placeholder="Ingrese su nickname" [(ngModel)] = "jugador2.name" name="jugador2">
 
             <label for="type_select">Opciones</label>
             <select id="type_select">
                 <option value="1">Jugar</option>
-                <option value="1">Observar</option>
+                <option value="2">Observar</option>
             </select>
 
             <input style="cursor: pointer;" type="submit" value="ingresar">
@@ -17,9 +20,3 @@
         </form>
     </div>
 </section>
-
-<script>
-    function ocultar(){
-        document.getElementById('cuerpo').style.display='none';
-    }
-</script>

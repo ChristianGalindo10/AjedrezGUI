@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { Jugador } from '../Jugador';
+import { NgxNavigationWithDataComponent } from 'ngx-navigation-with-data';
 
 @Component({
   selector: 'app-tablero',
@@ -8,21 +9,24 @@ import { Jugador } from '../Jugador';
 })
 
 export class TableroComponent implements OnInit {
+  
+  nombre1: string=this.navCtrl.get('name1');
+  nombre2: string=this.navCtrl.get('name2');
 
   jugador1: Jugador = {
     id: 1,
     color: "blanco",
-    name: "Cris"
+    name: this.nombre1
   };
   jugador2: Jugador = {
     id: 1,
     color: "negro",
-    name: "Cris2"
+    name: this.nombre2
   };
 
   filas=[];
 
-  constructor() { 
+  constructor(public navCtrl: NgxNavigationWithDataComponent) { 
     for(var i=0;i<8;i++){
       this.filas[i] = [];
       for(var j=0;j<8;j++){
